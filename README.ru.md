@@ -63,6 +63,50 @@ DeskAssistant.Core/
 - **Protocol Buffers** - сериализация данных
 - **Telegram Bot API** - система уведомлений
 
+## Сборка NuGet пакета DeskAssistant.Core
+
+1. Перейти в каталог библиотеки:
+```bash
+cd D:\Develop\Libraries\DeskAssistant.Core
+````
+
+2. Собрать пакет:
+
+```bash
+dotnet pack --configuration Release
+```
+
+3. Удаляем старый источник
+```bash
+dotnet nuget remove source LocalDeskAssistant
+```
+
+4. Добавить локальный источник (если еще не добавлен):
+
+```bash
+dotnet nuget add source D:\Develop\Libraries\DeskAssistant.Core\nuget -n LocalDeskAssistant
+```
+
+5. Проверить подключенные источники:
+
+```bash
+dotnet nuget list source
+```
+
+6. Подключить пакет к проекту DeskAssistant:
+
+```bash
+cd D:\Develop\DeskAssistant\DeskAssistant
+dotnet add package DeskAssistant.Core --version 1.0.0
+```
+
+7. При изменениях версии пересобрать пакет:
+
+```bash
+dotnet pack -c Release -p:Version=1.0.1
+dotnet add package DeskAssistant.Core --version 1.0.1
+```
+
 ## 📁 Использование
 
 Проект представляет собой библиотеку, которая может быть подключена к основному приложению DeskAssistant.
