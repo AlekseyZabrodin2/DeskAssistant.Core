@@ -63,6 +63,51 @@ DeskAssistant.Core/
 - **Protocol Buffers** - data serialization
 - **Telegram Bot API** - notification system
 
+## Building the DeskAssistant.Core NuGet Package
+
+1. Navigate to the library folder:
+```bash
+cd D:\Develop\Libraries\DeskAssistant.Core
+````
+
+2. Build the package:
+
+```bash
+dotnet pack --configuration Release
+```
+
+3. Remove the old source:
+
+```bash
+dotnet nuget remove source LocalDeskAssistant
+```
+
+4. Add the local source (if not already added):
+
+```bash
+dotnet nuget add source D:\Develop\Libraries\DeskAssistant.Core\nuget -n LocalDeskAssistant
+```
+
+5. Verify the configured sources:
+
+```bash
+dotnet nuget list source
+```
+
+6. Add the package to the DeskAssistant project:
+
+```bash
+cd D:\Develop\DeskAssistant\DeskAssistant
+dotnet add package DeskAssistant.Core --version 1.0.0
+```
+
+7. When making changes, rebuild the package and update the project:
+
+```bash
+dotnet pack -c Release -p:Version=1.0.1
+dotnet add package DeskAssistant.Core --version 1.0.1
+```
+
 ## 📁 Usage
 
 This project is a library that can be referenced by the main DeskAssistant application.
