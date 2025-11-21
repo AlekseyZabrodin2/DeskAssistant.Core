@@ -67,4 +67,4 @@ DeskAssistant.Core/
 
 This project is a library that can be referenced by the main DeskAssistant application.
 
----"# DeskAssistant.Core" 
+---
