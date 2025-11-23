@@ -67,7 +67,7 @@ DeskAssistant.Core/
 
 1. Перейти в каталог библиотеки:
 ```bash
-cd D:\Develop\Libraries\DeskAssistant.Core
+cd D:\Develop\DeskAssistant.Core
 ````
 
 2. Собрать пакет:
@@ -84,7 +84,7 @@ dotnet nuget remove source LocalDeskAssistant
 4. Добавить локальный источник (если еще не добавлен):
 
 ```bash
-dotnet nuget add source D:\Develop\Libraries\DeskAssistant.Core\nuget -n LocalDeskAssistant
+dotnet nuget add source D:\Develop\DeskAssistant.Core\nuget -n LocalDeskAssistant
 ```
 
 5. Проверить подключенные источники:

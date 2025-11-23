@@ -67,7 +67,7 @@ DeskAssistant.Core/
 
 1. Navigate to the library folder:
 ```bash
-cd D:\Develop\Libraries\DeskAssistant.Core
+cd D:\Develop\DeskAssistant.Core
 ````
 
 2. Build the package:
@@ -85,7 +85,7 @@ dotnet nuget remove source LocalDeskAssistant
 4. Add the local source (if not already added):
 
 ```bash
-dotnet nuget add source D:\Develop\Libraries\DeskAssistant.Core\nuget -n LocalDeskAssistant
+dotnet nuget add source D:\Develop\DeskAssistant.Core\nuget -n LocalDeskAssistant
 ```
 
 5. Verify the configured sources:
