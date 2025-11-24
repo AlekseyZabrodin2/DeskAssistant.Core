@@ -18,9 +18,10 @@
         {
             return status?.ToLower() switch
             {
-                "в процессе" => TaskStatusEnum.InProgress,
-                "в ожидание" => TaskStatusEnum.Pending,
-                "выполненно" => TaskStatusEnum.Completed,
+                "выполняется" => TaskStatusEnum.InProgress,
+                "ожидание" => TaskStatusEnum.Pending,
+                "завершено" => TaskStatusEnum.Completed,
+                "просрочено" => TaskStatusEnum.Expired,
                 _ => TaskStatusEnum.InProgress
             };
         }
@@ -29,10 +30,10 @@
         {
             return priority switch
             {
-                PrioritiesLevelEnum.Высокий => "высокий",
-                PrioritiesLevelEnum.Средний => "средний",
-                PrioritiesLevelEnum.Низкий => "низкий",
-                _ => "низкий"
+                PrioritiesLevelEnum.Высокий => "Высокий",
+                PrioritiesLevelEnum.Средний => "Средний",
+                PrioritiesLevelEnum.Низкий => "Низкий",
+                _ => "Низкий"
             };
         }
 
@@ -40,10 +41,11 @@
         {
             return status switch
             {
-                TaskStatusEnum.InProgress => "в процессе",
-                TaskStatusEnum.Pending => "в ожидание",
-                TaskStatusEnum.Completed => "выполненно",
-                _ => "в процессе"
+                TaskStatusEnum.InProgress => "Выполняется",
+                TaskStatusEnum.Pending => "Ожидание",
+                TaskStatusEnum.Completed => "Завершено",
+                TaskStatusEnum.Expired => "Просрочено",
+                _ => "Выполняется"
             };
         }
 

@@ -35,7 +35,7 @@ namespace DeskAssistant.Core.Models
         [ObservableProperty]
         public partial string Tags { get; set; } = string.Empty;
         [ObservableProperty]
-        public partial TaskStatusEnum Status { get; set; }
+        public partial string Status { get; set; }
 
         [ObservableProperty]
         public partial bool IsCompleted { get; set; }
