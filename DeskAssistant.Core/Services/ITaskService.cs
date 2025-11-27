@@ -12,5 +12,6 @@ namespace DeskAssistant.Core.Services
         Task<List<CalendarTaskEntity>> GetAllTasksAsync();
         Task AddTaskForSelectedDate(CalendarTaskEntity taskEntity);
         Task UpdateTaskAsync(CalendarTaskModel taskEntity, TaskStatusEnum status);
+        Task DataBaseEchoAsync();
     }
 }
