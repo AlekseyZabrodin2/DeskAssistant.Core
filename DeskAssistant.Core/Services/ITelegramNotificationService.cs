@@ -10,5 +10,6 @@ namespace DeskAssistant.Core.Services
         Task UpdateTaskAsync(CalendarTaskModel taskEntity, TaskStatusEnum status);
         Task NotifyTaskCreatedAsync(CalendarTaskModel notification);
         Task NotifyTaskCompletedAsync(CalendarTaskModel notification);
+        Task NotifycationFromClientAsync(CalendarTaskModel notification);
     }
 }
