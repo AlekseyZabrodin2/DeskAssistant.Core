@@ -31,5 +31,7 @@ namespace DeskAssistant.Core.Models
 
         [ObservableProperty]
         public partial DateTime CreatedAt { get; set; }
+        [ObservableProperty]
+        public partial bool IsSentToday { get; set; }
     }
 }
