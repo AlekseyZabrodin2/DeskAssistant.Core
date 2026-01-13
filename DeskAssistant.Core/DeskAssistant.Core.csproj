@@ -16,6 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Protos\birthdays.proto" />
     <None Remove="Protos\notification.proto" />
     <None Remove="Protos\task.proto" />
     <None Remove="Protos\telegram.proto" />
@@ -28,6 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Protobuf Include="Protos\birthdays.proto" GrpcServices="Client" />
     <Protobuf Include="Protos\notification.proto" GrpcServices="Client" />
     <Protobuf Include="Protos\task.proto" GrpcServices="Client" />
     <Protobuf Include="Protos\telegram.proto" GrpcServices="Client" />
