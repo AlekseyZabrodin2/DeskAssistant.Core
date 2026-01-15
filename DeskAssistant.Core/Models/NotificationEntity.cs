@@ -15,6 +15,9 @@ namespace DeskAssistant.Core.Models
         public partial TimeSpan NotificationTime { get; set; }
 
         [ObservableProperty]
+        public partial Guid? TimerId { get; set; }
+
+        [ObservableProperty]
         public partial bool MondayEnabled { get; set; }
         [ObservableProperty]
         public partial bool TuesdayEnabled { get; set; }
