@@ -4,6 +4,9 @@ option csharp_namespace = "GrpcService";
 
 service TaskService {
   rpc CreateTask (TaskItem) returns (TaskResponse);
+  rpc DeleteTaskById (DeleteTaskRequest) returns (TaskResponse);
+  rpc DeleteExpiredTasks (DeleteExpiredRequest) returns (TaskResponse);
+  rpc DeleteCompletedTasks (EmptyRequest) returns (TaskResponse);
   rpc UpdateTask (TaskItem) returns (TaskResponse);
   rpc GetAllTasks (EmptyRequest) returns (GetAllTasksResponse);
   rpc CompleteTask (TaskCompleteRequest) returns (TaskResponse);
@@ -17,7 +20,7 @@ message TaskItem {
     string name = 2;
     string description = 3;
     string due_date = 4;
-    string is_completed =5;
+    string is_completed = 5;
     string priority = 6;
     string category = 7;
     string status = 8;
@@ -47,6 +50,15 @@ message TaskNotifyRequest {
   string task_priority = 3;
   string task_due_date = 4;
 }
+
+message DeleteTaskRequest {
+    int32 task_id = 1;
+}
+
+message DeleteExpiredRequest {    
+    int32 days_to_keep = 1;
+}
+
 message TaskServerEchoResponse{
     bool success = 1;
 	string message = 2;

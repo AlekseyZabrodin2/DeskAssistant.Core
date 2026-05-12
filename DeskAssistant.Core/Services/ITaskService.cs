@@ -13,5 +13,9 @@ namespace DeskAssistant.Core.Services
         Task AddTaskForSelectedDate(CalendarTaskEntity taskEntity);
         Task UpdateTaskAsync(CalendarTaskModel taskEntity, TaskStatusEnum status);
         Task DataBaseEchoAsync();
+
+        Task<bool> DeleteTaskByIdAsync(int id);
+        Task<bool> DeleteExpiredTasksAsync(int daysToKeep);
+        Task<bool> DeleteCompletedTasksAsync();
     }
 }
